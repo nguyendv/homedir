@@ -4,7 +4,9 @@
 .cache/
 .ssh/
 Applications/
+AdobeConnectAppCache/
 CloudDocs
+Creative\ Cloud\ Files/
 Desktop/
 Documents/
 Downloads/
@@ -15,4 +17,18 @@ Music/
 Pictures/
 Public/
 Virtual\ Machines.localized/
+bin/
+brazil-pkg-cache/
+go/
 src/
+perl5/
+workplace/
+.bash_sessions/
+.python_history
+.yanrc
+.tldrc/
+.tmux/
+.utop-history
+.viminfo
+.zsh_history
+.zshrc.pre-oh-my-zsh
