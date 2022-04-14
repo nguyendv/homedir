@@ -159,4 +159,4 @@ lvim.plugins = {
 -- }
 
 -- spell file
-vim.opt.spellfile = '~/.spellfiles/en.utf-8.add'
+vim.opt.spellfile = os.getenv('HOME') .. '/.vimspells/en.utf-8.add'

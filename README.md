@@ -1,4 +1,4 @@
-Welcome to dvnguyen's home dir!
+Welcome to dvnguyen's home directory!
 
 To install packages that I often use, simply run `make install`
 
