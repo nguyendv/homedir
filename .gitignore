@@ -54,4 +54,16 @@ workplace/
 .viminfo
 .zsh_history
 .zshrc.pre-oh-my-zsh
+.node_repl_history
+.oh-my-zsh
+.account
+.bats
+.cargo/
+.cpan/
+.cups/
+.emacspersps
+.m2/
+.sonar/
+.vim/
+.vmodules/
 adobeconnectapp.log
