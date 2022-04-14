@@ -18,6 +18,7 @@ if [[ $(date +%u) == 6 || $(date +%u) == 7 ]]; then
 fi
 
 function install_taskwarrior() {
+  echo "[info] installing taskwarrior on platform=$platform and distro=$distro"
   if [[ -x "$(command -v task)" ]]; then
     return
   fi
@@ -38,6 +39,7 @@ function install_taskwarrior() {
 }
 
 function upgrade_taskwarrior() {
+  echo "[info] upgrading taskwarrior on platform=$platform and distro=$distro"
   if [[ $platform == "macos" ]]; then
     brew upgrade task
   elif [[ $platform == "linux" ]]; then
@@ -54,6 +56,7 @@ function upgrade_taskwarrior() {
 }
 
 function install_neovim() {
+  echo "[info] installing neovim on platform=$platform and distro=$distro"
   if [[ -x "$(command -v nvim)" ]]; then
     return
   fi
@@ -79,6 +82,7 @@ function install_neovim() {
 }
 
 function upgrade_neovim() {
+  echo "[info] upgrading neovim on platform=$platform and distro=$distro"
   if [[ $platform == "macos" ]]; then
     brew upgrade neovim
   elif [[ $platform == "linux" ]]; then
@@ -98,6 +102,7 @@ function upgrade_neovim() {
 }
 
 function install_lunarvim() {
+  echo "[info] install lunarvim"
   if ! [[ -x "$(command -v lvim)" ]]; then
     bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
   fi
