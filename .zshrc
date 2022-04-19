@@ -142,3 +142,6 @@ export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# AmazonAwsCli binaries
+export PATH=/apollo/env/AmazonAwsCli/bin:$PATH
