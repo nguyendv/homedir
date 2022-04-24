@@ -43,4 +43,7 @@ uda.note.type=string
 uda.note.label=Note
 uda.note.values=yes,no
 
+uda.estimate.type=numeric
+uda.estimate.label=Est
+
 alias.note=execute "${HOME}/Dropbox/taskwarrior/hooks/note"
