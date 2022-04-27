@@ -151,6 +151,13 @@ lvim.plugins = {
     end
   },
   { "iamcco/markdown-preview.nvim" },
+  { "nvim-lua/plenary.nvim" },
+  {
+    "scalameta/nvim-metals",
+    config = function()
+      require("user.metals").config()
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -160,3 +167,11 @@ lvim.plugins = {
 
 -- spell file
 vim.opt.spellfile = os.getenv('HOME') .. '/.vimspells/en.utf-8.add'
+
+-- prerequitsites for nvim-metals
+vim.opt_global.shortmess:remove("F")
+
+-- autocommand for metals
+lvim.autocommands.custom_groups = {
+  { "FileType", "scala,sbt", "lua require('user.metals').config()" }
+}
