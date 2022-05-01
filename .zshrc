@@ -152,3 +152,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 #Scala Coursier
 export PATH=$HOME/.local/share/coursier/bin:$PATH
+export PATH="$HOME/Library/Application Support/Coursier/bin:$PATH"
