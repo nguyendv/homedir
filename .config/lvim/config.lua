@@ -171,6 +171,7 @@ vim.opt.spellfile = os.getenv('HOME') .. '/.vimspells/en.utf-8.add'
 vim.opt_global.shortmess:remove("F")
 
 -- autocommand for metals
-lvim.autocommands.custom_groups = {
-  { "FileType", "scala,sbt", "lua require('user.metals').config()" }
-}
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.scala", "*.sbt" },
+  command = "lua require('user.metals').config()"
+})
