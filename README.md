@@ -6,3 +6,4 @@ The `main` branch contains configure files for macOS. Check out other branches i
 
 Other configurations that don't show here:
 - I use OneDark color presets for item2
+- I use FiraCode Nerd Font Mono font
