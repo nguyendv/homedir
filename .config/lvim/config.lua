@@ -151,12 +151,6 @@ lvim.plugins = {
   },
   { "iamcco/markdown-preview.nvim" },
   { "nvim-lua/plenary.nvim" },
-  {
-    "scalameta/nvim-metals",
-    config = function()
-      require("user.metals").config()
-    end,
-  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
