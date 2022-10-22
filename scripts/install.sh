@@ -1,17 +1,6 @@
-# install or update packages
+# "import" platform.sh
+. ./platform.sh
 
-platform='unknown'
-distro='unknown'
-
-if [[ $OSTYPE == "darwin"* ]]; then
-  platform="macos"
-elif [[ $OSTYPE == "linux-gnu"* ]]; then
-  platform="linux"
-
-  if [[ $(hostnamectl | grep "Operating System") == *"Amazon Linux 2" ]]; then
-    distro="al2"
-  fi
-fi
 
 if [[ $(date +%u) == 6 || $(date +%u) == 7 ]]; then
   is_weekend=true
