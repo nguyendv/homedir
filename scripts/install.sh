@@ -5,6 +5,7 @@
 function install_taskwarrior() {
   echo "[info] installing taskwarrior on platform=$platform and distro=$distro"
   if [[ -x "$(command -v task)" ]]; then
+    echo "[info] skipping installing taskwarrior. The nvim binary is detected in the current system"
     return
   fi
 
@@ -26,6 +27,7 @@ function install_taskwarrior() {
 function install_neovim() {
   echo "[info] installing neovim on platform=$platform and distro=$distro"
   if [[ -x "$(command -v nvim)" ]]; then
+    echo "[info] skipping installing neovim. The nvim binary is detected in the current system"
     return
   fi
 
@@ -51,9 +53,11 @@ function install_neovim() {
 
 function install_lunarvim() {
   echo "[info] install lunarvim"
-  if ! [[ -x "$(command -v lvim)" ]]; then
-    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+  if [[ -x "$(command -v lvim)" ]]; then
+    echo "[info] skipping installing lunarvim. The lvim binary is detected in the current system"
+    return
   fi
+  bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 }
 
 function install() {
