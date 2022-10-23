@@ -169,3 +169,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = { "*.scala", "*.sbt" },
   command = "lua require('user.metals').config()"
 })
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
