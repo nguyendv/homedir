@@ -11,3 +11,16 @@ To update all software:
 ```
 zsh update.sh
 ```
+
+To uninstall a software:
+
+```
+zsh uninstall.sh <software>
+```
+
+To reinstall a software:
+
+```
+zsh uninstall.sh <software>
+zsh install.sh
+```
