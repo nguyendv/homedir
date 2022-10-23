@@ -20,7 +20,7 @@ function upgrade_taskwarrior() {
 }
 
 function upgrade_neovim() {
-  echo "[info] upgrading neovim on platform=$platform and distro=$distro"
+  echo "[info] upgrading neovim"
   if [[ $platform == "macos" ]]; then
     brew upgrade neovim
   elif [[ $platform == "linux" ]]; then
@@ -40,7 +40,9 @@ function upgrade_neovim() {
 }
 
 function upgrade_lunarvim() {
-  echo "[warn] it's time to upgrade lvim. Open lvim and run :LvimUpdate"
+  echo "[info] upgrading lvim"
+  lvim +LvimUpdate +q
+  echo "[warn] it's time to upgrade neovim plugins. Open lvim and run :LvimSyncPlugins"
 }
 
 function update() {
